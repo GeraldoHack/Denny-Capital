@@ -208,7 +208,7 @@
 
         /* Hero Section Mobile */
         .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://i.postimg.cc/25SJyCRb/IMG-20251104-WA0094.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--branco);
@@ -1408,7 +1408,7 @@
             });
         });
 
-        // Formulário de Contacto - Redirecionar para email
+        // Formulário de Contacto - CORREÇÃO: Enviar apenas para Denny Capital
         const form = document.getElementById('form-contacto');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -1418,15 +1418,10 @@
             const assunto = document.getElementById('assunto').value;
             const mensagem = document.getElementById('mensagem').value;
             
-            // Redirecionar para o email do usuário
-            window.location.href = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+            // CORREÇÃO: Enviar apenas para o email da Denny Capital
+            window.location.href = `mailto:infodennycapital@gmail.com?subject=${encodeURIComponent('Contacto do Site: ' + assunto)}&body=${encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\nMensagem:\n' + mensagem)}`;
             
-            // Também enviar para o email da Denny Capital
-            setTimeout(() => {
-                window.location.href = `mailto:infodennycapital@gmail.com?subject=${encodeURIComponent('Contacto do Site: ' + assunto)}&body=${encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\nMensagem:\n' + mensagem)}`;
-            }, 500);
-            
-            alert('Obrigado pela sua mensagem! Será redirecionado para o seu email.');
+            alert('Obrigado pela sua mensagem! Será redirecionado para o email da Denny Capital.');
             form.reset();
         });
 
