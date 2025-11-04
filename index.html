@@ -727,6 +727,48 @@
             line-height: 1.3;
         }
 
+        /* Botão Flutuante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-float i {
+            margin-top: 2px;
+        }
+
         /* Melhorias para Android específico */
         @media (max-width: 480px) {
             .hero {
@@ -761,6 +803,14 @@
             .nav-menu {
                 width: 85%;
                 max-width: 280px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 26px;
             }
         }
 
@@ -912,7 +962,7 @@
                         <div class="slide-icon">
                             <i class="fas fa-comments-dollar"></i>
                         </div>
-                        <h3>Consultoria Rápida</h3>
+                        <h3>Consulta Rápida</h3>
                         <p>Sessões de consultoria focadas em questões específicas para resolver problemas financeiros imediatos.</p>
                     </div>
                     <div class="slide">
@@ -974,7 +1024,7 @@
                     </div>
                 </div>
                 <div class="sobre-img">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Damnandge Denny - Fundador da Denny Capital">
+                    <img src="https://i.postimg.cc/T1XhQtrb/IMG-20251104-WA0069.jpg" alt="Damnandge Denny - Fundador da Denny Capital">
                     <p><strong>Damnandge Denny</strong><br>Fundador da Denny Capital</p>
                 </div>
             </div>
@@ -993,8 +1043,8 @@
                     <div class="servico-content">
                         <h3>Planeamento Financeiro Personalizado</h3>
                         <p>Análise detalhada da sua situação financeira e criação de um plano personalizado para alcançar os seus objetivos.</p>
-                        <div class="preco">2.500 MZN</div>
-                        <a href="#contacto" class="btn">Solicitar</a>
+                        <div class="preco">4.499 MT</div>
+                        <a href="#" class="btn solicitar-servico" data-servico="Planeamento Financeiro Personalizado" data-preco="4.499 MT">Solicitar</a>
                     </div>
                 </div>
                 <div class="servico-card">
@@ -1002,10 +1052,10 @@
                         <i class="fas fa-comments-dollar"></i>
                     </div>
                     <div class="servico-content">
-                        <h3>Consultoria Rápida</h3>
+                        <h3>Consulta Rápida</h3>
                         <p>Sessões de consultoria focadas em questões específicas para resolver problemas financeiros imediatos.</p>
-                        <div class="preco">1.000 MZN</div>
-                        <a href="#contacto" class="btn">Solicitar</a>
+                        <div class="preco">1.000 MT</div>
+                        <a href="#" class="btn solicitar-servico" data-servico="Consulta Rápida" data-preco="1.000 MT">Solicitar</a>
                     </div>
                 </div>
                 <div class="servico-card">
@@ -1015,8 +1065,8 @@
                     <div class="servico-content">
                         <h3>Planilhas Financeiras</h3>
                         <p>Ferramentas práticas para controlar gastos, poupanças e investimentos de forma organizada e eficiente.</p>
-                        <div class="preco">500 MZN</div>
-                        <a href="#contacto" class="btn">Comprar</a>
+                        <div class="preco">500 MT</div>
+                        <a href="#" class="btn solicitar-servico" data-servico="Planilhas Financeiras" data-preco="500 MT">Comprar</a>
                     </div>
                 </div>
                 <div class="servico-card">
@@ -1027,7 +1077,7 @@
                         <h3>Workshops de Educação Financeira</h3>
                         <p>Cursos e workshops para grupos e empresas sobre gestão financeira, poupança e investimento.</p>
                         <div class="preco">Sob consulta</div>
-                        <a href="#contacto" class="btn">Informações</a>
+                        <a href="#" class="btn solicitar-servico" data-servico="Workshops de Educação Financeira" data-preco="Sob consulta">Informações</a>
                     </div>
                 </div>
             </div>
@@ -1152,7 +1202,7 @@
                         </div>
                         <div class="contacto-details">
                             <h4>WhatsApp</h4>
-                            <p>+258 84 123 4567</p>
+                            <p>+258 877 281 112</p>
                         </div>
                     </div>
                     
@@ -1162,7 +1212,7 @@
                         </div>
                         <div class="contacto-details">
                             <h4>Email</h4>
-                            <p>info@dennycapital.co.mz</p>
+                            <p>infodennycapital@gmail.com</p>
                         </div>
                     </div>
                     
@@ -1185,7 +1235,7 @@
                 
                 <div class="contacto-form">
                     <h3>Envie-nos uma Mensagem</h3>
-                    <form>
+                    <form id="form-contacto">
                         <div class="form-group">
                             <label for="nome">Nome Completo</label>
                             <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
@@ -1236,7 +1286,7 @@
                     <h3>Serviços</h3>
                     <ul>
                         <li><a href="#">Planeamento Financeiro</a></li>
-                        <li><a href="#">Consultoria Rápida</a></li>
+                        <li><a href="#">Consulta Rápida</a></li>
                         <li><a href="#">Planilhas Financeiras</a></li>
                         <li><a href="#">Workshops</a></li>
                     </ul>
@@ -1244,8 +1294,8 @@
                 <div class="footer-col">
                     <h3>Contacto</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> +258 84 123 4567</li>
-                        <li><i class="far fa-envelope"></i> info@dennycapital.co.mz</li>
+                        <li><i class="fas fa-phone"></i> +258 877 281 112</li>
+                        <li><i class="far fa-envelope"></i> infodennycapital@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Maputo, Moçambique</li>
                     </ul>
                 </div>
@@ -1256,6 +1306,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/258877281112?text=Olá! Gostaria de obter mais informações sobre os serviços da Denny Capital." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         // Menu Mobile - CORREÇÃO DO DRAWER
@@ -1353,12 +1408,42 @@
             });
         });
 
-        // Formulário de Contacto
-        const form = document.querySelector('form');
+        // Formulário de Contacto - Redirecionar para email
+        const form = document.getElementById('form-contacto');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Obrigado pela sua mensagem! Entraremos em contacto em breve.');
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Redirecionar para o email do usuário
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
+            
+            // Também enviar para o email da Denny Capital
+            setTimeout(() => {
+                window.location.href = `mailto:infodennycapital@gmail.com?subject=${encodeURIComponent('Contacto do Site: ' + assunto)}&body=${encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\nMensagem:\n' + mensagem)}`;
+            }, 500);
+            
+            alert('Obrigado pela sua mensagem! Será redirecionado para o seu email.');
             form.reset();
+        });
+
+        // Função para redirecionar para WhatsApp com informações do serviço
+        document.querySelectorAll('.solicitar-servico').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const servico = btn.getAttribute('data-servico');
+                const preco = btn.getAttribute('data-preco');
+                
+                // Mensagem personalizada para WhatsApp
+                const mensagem = `Olá! Gostaria de solicitar o serviço: ${servico} (${preco}). Pode fornecer mais informações?`;
+                
+                // Redirecionar para WhatsApp
+                window.open(`https://wa.me/258877281112?text=${encodeURIComponent(mensagem)}`, '_blank');
+            });
         });
 
         // Melhorias de performance para Android
