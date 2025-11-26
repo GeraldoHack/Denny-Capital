@@ -411,6 +411,122 @@
             margin: 8px 0;
         }
 
+        /* Ebooks Section */
+        .ebooks {
+            background-color: var(--cinza-claro);
+            padding: 35px 0;
+        }
+
+        .ebooks-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .ebook-card {
+            background-color: var(--branco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .ebook-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .ebook-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ebook-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .ebook-card:hover .ebook-img img {
+            transform: scale(1.03);
+        }
+
+        .ebook-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--dourado);
+            color: var(--azul-escuro);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .ebook-content {
+            padding: 16px;
+        }
+
+        .ebook-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: var(--azul-escuro);
+        }
+
+        .ebook-content p {
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .ebook-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .ebook-pages, .ebook-format {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--azul-medio);
+        }
+
+        .ebook-pages i, .ebook-format i {
+            margin-right: 5px;
+            color: var(--dourado);
+        }
+
+        .ebook-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--dourado);
+            text-align: center;
+            margin: 12px 0;
+        }
+
+        .btn-ebook {
+            display: block;
+            width: 100%;
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-ebook:hover {
+            background-color: var(--azul-medio);
+        }
+
         /* Testemunhos Mobile */
         .testemunhos {
             background-color: var(--cinza-claro);
@@ -826,6 +942,11 @@
                 gap: 18px;
             }
             
+            .ebooks-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+            }
+            
             .valores {
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -883,6 +1004,11 @@
                 grid-template-columns: repeat(4, 1fr);
             }
             
+            .ebooks-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1200px;
+            }
+            
             .sobre-content {
                 flex-direction: row;
             }
@@ -927,6 +1053,7 @@
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#ebooks">Ebooks</a></li>
                 <li><a href="#testemunhos">Testemunhos</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -1080,6 +1207,85 @@
                         <a href="#" class="btn solicitar-servico" data-servico="Workshops de Educação Financeira" data-preco="Sob consulta">Informações</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ebooks Section -->
+    <section class="ebooks" id="ebooks">
+        <div class="container">
+            <h2 class="section-title">Nossos Ebooks</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Conhecimento financeiro acessível para transformar a sua relação com o dinheiro</p>
+            
+            <div class="ebooks-grid">
+                <div class="ebook-card">
+                    <div class="ebook-img">
+                        <img src="https://i.postimg.cc/mrSCZmHB/IMG-20251126-WA0068-1.jpg" alt="Como organizar o teu dinheiro em casa">
+                        <div class="ebook-badge">Mais Vendido</div>
+                    </div>
+                    <div class="ebook-content">
+                        <h3>Como Organizar o Teu Dinheiro em Casa</h3>
+                        <p>Aprenda estratégias práticas para controlar suas finanças domésticas, criar orçamentos realistas e alcançar estabilidade financeira mesmo com recursos limitados.</p>
+                        
+                        <div class="ebook-meta">
+                            <div class="ebook-pages">
+                                <i class="fas fa-file-alt"></i>
+                                <span>45 páginas</span>
+                            </div>
+                            <div class="ebook-format">
+                                <i class="fas fa-download"></i>
+                                <span>PDF</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ebook-price">180 MT</div>
+                        
+                        <a href="https://pay.tutora.co.mz/2c16928e28904bd797668f3cb717b307" class="btn-ebook" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Comprar Agora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Espaço para futuros ebooks -->
+                <div class="ebook-card coming-soon">
+                    <div class="ebook-img">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-book" style="font-size: 50px; color: #ccc;"></i>
+                        </div>
+                    </div>
+                    <div class="ebook-content">
+                        <h3>Novo Ebook em Breve</h3>
+                        <p>Estamos a preparar novos conteúdos para te ajudar na tua jornada financeira. Fique atento às novidades!</p>
+                        
+                        <div class="ebook-price">-- MT</div>
+                        
+                        <button class="btn-ebook" disabled>
+                            <i class="fas fa-bell"></i> Em Breve
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="ebook-card coming-soon">
+                    <div class="ebook-img">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-book" style="font-size: 50px; color: #ccc;"></i>
+                        </div>
+                    </div>
+                    <div class="ebook-content">
+                        <h3>Novo Ebook em Breve</h3>
+                        <p>Estamos a preparar novos conteúdos para te ajudar na tua jornada financeira. Fique atento às novidades!</p>
+                        
+                        <div class="ebook-price">-- MT</div>
+                        
+                        <button class="btn-ebook" disabled>
+                            <i class="fas fa-bell"></i> Em Breve
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <p><strong>Garantia de 7 dias:</strong> Se não ficar satisfeito com o ebook, devolvemos o seu dinheiro.</p>
             </div>
         </div>
     </section>
@@ -1278,6 +1484,7 @@
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
                         <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#ebooks">Ebooks</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
@@ -1289,6 +1496,7 @@
                         <li><a href="#">Consulta Rápida</a></li>
                         <li><a href="#">Planilhas Financeiras</a></li>
                         <li><a href="#">Workshops</a></li>
+                        <li><a href="#ebooks">Ebooks</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
